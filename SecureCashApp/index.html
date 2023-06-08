@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okan Alpturk</title>
+    <style>
+       .btn{
+        text-decoration: none;
+        font-size: 19px;
+        margin: 10px 20px;
+        display: inline-block;
+        padding: 10px 40px;
+        border: 1px solid #FA7070;
+        color : #FA7070;
+       }
+       .btn:hover{
+        color: #fff;
+        background-color: #FA7070;
+       }
+      
+    </style>
+</head>
+<body>
+
+    <script src="app.js"></script>
+    &nbsp;&nbsp;&nbsp;&nbsp; <input type="number" name="txt1" id="txt1" placeholder="id">
+    <input type="text" name="txt2" id="txt2" placeholder="name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn4" onclick="login(document.getElementById('txt1').value,document.getElementById('txt2').value)">Login</button><br>
+    <button class="btn btnSimulate" title="Show random created employees with Tester Class" onclick='ShowEmployees()'>Show Random Created Employees </button>
+    <button class="btn btnSimulate" title="Simulate random created employees with Tester Class" onclick='Simulate()'>Simulate </button>
+    <br><br><br><br>
+    <table border="1" >
+        <tr >
+           <td rowspan="2">
+            <table style=" height: 500px;">
+                <tr style="height: 50px;">                  
+                    <td style="width: 350px;"><b style="font-size: 24px;color: #FA7070;">Secure</b><br>max capacity: 2</td>
+                    <td>
+                        <button class="btn btn4" title="From Secure to Operations" onclick='Door_3and4()'>Door 4</button>
+                        <br>
+                        <button class="btn btn5" title="From Operations to Secure" onclick='Door_5()'>Door 5</button>
+                                      
+                    </td>     
+                </tr>        
+                <tr></tr>
+             </table>
+        
+        </td>   
+        <td style="height: 200px;width: 500px;">
+            <table style=" height: 300px;">
+                <tr><td><b style="font-size: 24px;color: #FA7070;">Operations</b><br> max capacity: 5</td></tr>
+                <br>
+                <tr><td><br><br><br><br><br><br><br><br><br>
+                        <button class="btn btn2" title="From Operations to Transaction" onclick='Door_0and2()'>Door 2</button>
+                        <button class="btn btn3" title="From Transaction to Operations" onclick='Door_3and4()'>Door 3</button>
+                        <br>            
+                </td></tr>
+            </table>
+            </td>  
+        </tr>
+        
+        <tr>
+            <td style="height: 200px;width: 500px;">
+                <table style=" height: 300px;">
+                    <tr><td><b style="font-size: 24px;color: #FA7070;">Transaction</b><br> max capacity: 7</td></tr>
+                    <br>
+                    <tr><td><br><br><br><br><br><br><br><br><br>
+                            <button class="btn btn0" title="From Outside to Transaction" onclick='Door_0and2()'>Door 0</button>
+                            <button class="btn btn1" title="From Transaction to Outside" onclick='Door_0and2()'>Door 1</button>
+                            <br>            
+                    </td></tr>
+                </table>
+                </td>  
+        </tr>
+        <tr style="height: 200px;">
+            <td colspan="2"><b style="font-size: 24px;color: #FA7070;">Outside</b> <br> max capacity: unlimited</td>
+        </tr>
+      
+    </table>
+</body>
+</html>
